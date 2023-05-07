@@ -1,23 +1,28 @@
 ﻿using System;
 using System.Globalization;
 
-namespace MedidasTriangulo {
-    class Program {
-        static void Main(string[] args) {
+namespace MedidasTriangulo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             Triangulo x, y;
             x = new Triangulo();
             y = new Triangulo();
 
             double areaX = AreaX(x);
             double areaY = AreaX(x);
-            
+
             Console.WriteLine("Área de X = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("Área de Y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
 
-            if (areaX > areaY) {
+            if (areaX > areaY)
+            {
                 Console.WriteLine("Maior área: X");
             }
-            else {
+            else
+            {
                 Console.WriteLine("Maior área: Y");
             }
         }
@@ -25,9 +30,9 @@ namespace MedidasTriangulo {
         static double AreaX(Triangulo x)
         {
             Console.WriteLine("Entre com as medidas do triângulo X:");
-            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.A = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+            x.B = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+            x.C = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
             double areaX = x.Area();
 
             return areaX;
