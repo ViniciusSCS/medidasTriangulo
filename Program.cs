@@ -41,9 +41,9 @@ namespace MedidasTriangulo
         static double AreaY(Triangulo y)
         {
             Console.WriteLine("Entre com as medidas do triângulo Y:");
-            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.A = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+            y.B = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+            y.C = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
             double areaY = y.Area();
 
             return areaY;
